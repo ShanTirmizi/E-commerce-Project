@@ -1,11 +1,36 @@
 import React from 'react'
-import Grid from '@material-ui/core'
+import Product from './Product/Product'
+import { Grid } from '@material-ui/core'
+
+
+const products = [
+    { 
+        id: 1, 
+        name: 'Shoes', 
+        description: 'Running shoes',
+        price: 10,
+        image: 'https://images.unsplash.com/photo-1595461135849-bf08893fdc2c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80' },
+    { 
+        id: 2, 
+        name: 'Macbook', 
+        description: 'Apple macbook', 
+        price: 20,
+        image: 'https://images.unsplash.com/photo-1595461135849-bf08893fdc2c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80' }
+]
 
 const Products = () => {
     return (
-        <div>
-            
-        </div>
+        <main>
+            <Grid container justify="center" spacing={4}>
+                {products.map((product) => {
+                    return (
+                    <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
+                        <Product product={product} />
+                    </Grid>
+                    )
+                })}
+            </Grid>
+        </main>
     )
 }
 
