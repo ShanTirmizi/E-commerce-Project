@@ -1,8 +1,8 @@
+import Products from './components/Products/Products'
 
 function App() {
   return (
-
-    <div>hello world</div>
+    <Products />
   );
 }
 
