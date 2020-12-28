@@ -1,8 +1,11 @@
-import Products from './components/Products/Products'
+import { Products, Navbar } from './components'
 
 function App() {
   return (
-    <Products />
+    <div>
+      <Navbar />
+      <Products />
+    </div>
   );
 }
 

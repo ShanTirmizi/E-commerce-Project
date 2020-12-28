@@ -2,7 +2,7 @@ import { Card, CardActions } from '@material-ui/core';
 import React from 'react'
 import { CardMedia, CardContent, Typography, IconButton } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
-import useStyles from './cartItemStyles';
+import useStyles from './productStyles';
 // import classes from '*.module.css';
 
 const Product = ({product}) => {
