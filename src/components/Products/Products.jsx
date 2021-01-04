@@ -20,7 +20,7 @@ const Products = ({products, onAddToCart}) => {;
         //         })}
         //     </Grid>
         // </main>
-        <div className='container'>
+        <div className='container-1'>
             <div className='top-spacing' />
             <div className='sub-container'>
             {products.map((product) => {

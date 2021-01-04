@@ -3,6 +3,7 @@ import React from 'react'
 import { CardMedia, CardContent, Typography, IconButton } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
 import useStyles from './productStyles';
+import {Link} from 'react-router-dom';
 import './productStyles.css'
 
 const Product = ({product, onAddToCart}) => {
@@ -30,13 +31,19 @@ const Product = ({product, onAddToCart}) => {
         //         </IconButton>
         //     </CardActions>
         // </Card>
-
-        <div className="card">
+        <div>
+            <div className = 'product-margin' />
+        <div className="product-card">
+            <Link className='remove-line'  to={`${product.id}`}>
             <img src={product.media.source} alt={product.name} style={{width: '100%'}} className='image' />
-            <h1>{product.name}</h1>
+            <div className='same-line'>
+            <h1 className='product-name'>{product.name}</h1>
             <p className="price">{product.price.formatted_with_symbol}</p>
-            <p>{description} </p>
+            </div> 
+            {/* <p className='product-description'>{description} </p> */}
+            </Link>
             <p><button onClick={() => onAddToCart(product.id, 1)}>Add to Cart</button></p>
+        </div>
         </div>
 
 

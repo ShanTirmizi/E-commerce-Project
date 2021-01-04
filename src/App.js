@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Products, Navbar, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import IndProduct from './components/Products/IndProduct/IndProduct';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -9,6 +12,7 @@ function App() {
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
+    // console.log(data)
 
     setProducts(data);
   }
@@ -48,7 +52,7 @@ function App() {
     fetchCart();
   }, []);
 
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <Router>
@@ -67,6 +71,9 @@ function App() {
         </Route>
         <Route exact path="/checkout">
           <Checkout cart={cart} />
+        </Route>
+        <Route exact path="/:id" component={IndProduct}>
+          <IndProduct products={products} cart={cart} handleUpdateToCartQty={handleUpdateToCartQty}/>
         </Route>
       </Switch>
     </div>

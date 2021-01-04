@@ -1,0 +1,89 @@
+.margin {
+    margin-top: 100px;
+}
+.image img {
+    height: 60vh;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+  .add-to-basket button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: var(--color-five);
+    background-color: var(--color-one);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 15px 15px 15px 15px;
+    opacity: 0.9;
+    /* position: absolute;
+    bottom: 0;
+    right: 20px;
+     */
+
+  }
+
+  .info-position {
+    margin-left: 50px;
+
+
+  }
+
+  .add-to-basket button:hover {
+    opacity: 1;
+  
+  }
+
+  .product-page-price {
+    font-size: 25px;
+    color: var(--color-two);
+  }
+
+.success {
+  font-size: 25px;
+  color: var(--color-six);
+  font-weight: bold;
+}
+
+.error {
+  font-size: 25px;
+  color: var(--color-seven);
+  font-weight: bold;
+}
+
+.increament-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus-minus {
+  display: flex;
+}
+
+.btn-decor {
+  border: none;
+  outline: 0;
+  color: var(--color-five);
+  background-color: var(--color-one);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px 15px 15px 15px;
+  margin: 10px;
+  /* height: 40px; */
+  /* width: 50px; */
+}
+
+.product-qty {
+  margin-top: 20px;
+}
